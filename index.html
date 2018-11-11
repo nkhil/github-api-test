@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="dist/css/style.css">
   <script type="text/javascript" src="index.js" defer></script>
+  <script src="node_modules/axios/dist/axios.min.js"></script>
   <title>Github API</title>
 </head>
 <body>
@@ -22,7 +23,7 @@
           // API content goes here.
         -->
         <h1>
-          Enter the username for the Github account you would
+          Fetch: Enter the username for the Github account you would
           like to get more information on.
         </h1>
     </div>
@@ -40,13 +41,34 @@
     <div class="github-container2" id="github-container2">
 
       <h1>
-        Enter the data you're looking for above.
+        XMLHttpRequest: Enter the data you're looking for above.
       </h1>
 
     </div> <!-- github container 2-->
 
 
   </div> <!-- container 2-->
+
+
+  <div class="container3">
+
+      <div class="search-container3">
+          <form action="" id="form3">
+              <input type="text" name="github-form3" placeholder="Enter Github profile" id="searchQuery3" class="search-query3">
+              <input type="submit" name="submit" />
+            </form>
+      </div> <!-- search container 2-->
+  
+      <div class="github-container3" id="github-container3">
+  
+        <h1>
+          Axios: Enter the data you're looking for above.
+        </h1>
+  
+      </div> <!-- github container 2-->
+  
+  
+    </div> <!-- container 3-->
 
   
 </body>
