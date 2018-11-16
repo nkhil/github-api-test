@@ -1,6 +1,6 @@
 @import 'resets';
 @import 'mixins';
-@import url('https://fonts.googleapis.com/css?family=Rubik:300');
+// @import url('https://fonts.googleapis.com/css?family=Rubik:300');
 
 html, body {
   height: 100%;
@@ -18,8 +18,7 @@ html, body {
   // background-color: pink;
   justify-content: center;
   text-align: center;
-  border-radius: 10px;
-  padding: 50px;
+  
 }
 
 .github-container {
@@ -27,6 +26,10 @@ html, body {
   flex-direction: column;
   justify-content: center;
   text-align: center;
+
+  h1 {
+    margin: 1rem 3rem;
+  }
 
   img {
     align-self: center;
@@ -38,24 +41,44 @@ html, body {
 }
 
 .search-container {
+
   display: flex;
   justify-content: center;
   align-items: center;
   margin: auto;
   margin-bottom: 2rem;
+  margin-top: 2rem;
 
   form {
     display: flex;
     width: 100%;
+    align-items: center;
+    
 
     .search-query {
-      min-width: 400px;
+      min-width: 300px;
+      height: 40px;
+      font-size: 1.1rem;
+      
     }
 
-    // input {
-    //   width: 100%;
-    // }
+    .submit-button {
+      font-size: 1.5rem;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
   }
   
   
+}
+
+input[type="submit"]
+{
+    background-color: #4CAF50;
+    color: white;
+    padding: 5px 20px;
+    border: none;
+    cursor: pointer;
 }
