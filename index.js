@@ -36,14 +36,15 @@ function callApi(e){
 
 function renderData(data) {
   const html =  `
-    
-    <img src="${data.avatar_url}" alt="">
-    <h2 class = "fullname">${data.name}</h2>
-    <h3 class = "bio">${data.bio ? data.bio : 'No bio available'}</h3>
-    <h3 class = "location">${data.location}</h3>
-    <p>
-      <a href="http://${data.blog}" target="_blank"><button class="github-link">Visit Website</button></a>
-    </p>
+    <div class="github-container-deep">
+        <img src="${data.avatar_url}" alt="">
+        <h2 class = "fullname">${data.name}</h2>
+        <h3 class = "bio">${data.bio ? data.bio : 'no bio available'}</h3>
+        <h3 class = "location">${data.location}</h3>
+        <p>
+        <a href="${data.blog}" target="_blank"><button class="github-link">Visit Website</button></a>
+        </p>
+    </div>
     
    
   `;
