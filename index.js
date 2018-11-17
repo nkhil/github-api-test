@@ -26,6 +26,7 @@ function callApi(e){
     fetch(newEndpoint)
         .then(blob => blob.json())
         .then(data => {
+            console.log(data);
             renderData(data);
         });
  
@@ -36,12 +37,12 @@ function callApi(e){
 function renderData(data) {
   const html =  `
     
-    <h2>${data.login}</h2>
-    <h2>Full Name: ${data.name}</h2>
     <img src="${data.avatar_url}" alt="">
-    <h3>${data.bio}</h3>
+    <h2 class = "fullname">${data.name}</h2>
+    <h3 class = "bio">${data.bio}</h3>
+    <h3 class = "location">${data.location}</h3>
     <p>
-      Personal website: <a href="http://${data.blog}" target="_blank">${data.blog}</a>
+      <a href="http://${data.blog}" target="_blank"><button class="github-link">Visit Website</button></a>
     </p>
     
    

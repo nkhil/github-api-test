@@ -5,13 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="dist/css/style.css">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
   <script type="text/javascript" src="index.js" defer></script>
   <script src="node_modules/axios/dist/axios.min.js"></script>
   <title>Github API</title>
 </head>
 <body>
   <div class="container" id="container">
-    <h1>Enter Github username and hit 'Search'</h1>
+    <img src="img/github.png" alt="">
+    <h1 class="intro">Enter Github username and hit 'Search'</h1>
       <div class="search-container">
         <form action="" id="form">
           <input type="text" name="github-form" placeholder="Enter Github username" id="searchQuery" class="search-query">
@@ -23,7 +26,7 @@
         <!-- 
           // API content goes here.
         -->
-        <h1>
+        <h1 class="placeholder">
           Once you hit 'submit', we'll call the Github API and load the results here.
         </h1>
     </div>
