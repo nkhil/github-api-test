@@ -24,13 +24,25 @@ function callApi(e){
     const searchQuery = document.getElementById('searchQuery').value.toLowerCase() ;
     const newEndpoint = 'https://api.github.com/users/' + searchQuery;
     fetch(newEndpoint)
+        .then(handleErrors)
         .then(blob => blob.json())
         .then(data => {
             console.log(data);
             renderData(data);
+        })
+        .catch(function(error) {
+            console.log(error);
         });
  
 }
+
+function handleErrors(response) {
+    if (!response.ok) {
+        throw Error(response.statusText);
+    }
+    return response;
+}
+
 
 // Render that data out into the DOM
 
